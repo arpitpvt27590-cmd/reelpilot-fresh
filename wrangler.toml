@@ -1,0 +1,19 @@
+name = "reelpilot-fresh"
+main = "src/index.js"
+compatibility_date = "2026-10-16"
+workers_dev = true
+
+[vars]
+APP_BASE_URL = "https://reelpilot-fresh.YOUR-SUBDOMAIN.workers.dev"
+GRAPH_API_VERSION = "v24.0"
+MAX_VIDEO_BYTES = "95000000"
+MAX_BATCH_SIZE = "300"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "reelpilot-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["*/2 * * * *"]
